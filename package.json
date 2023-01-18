@@ -1,0 +1,34 @@
+{
+  "name": "monoschinos-api-ts",
+  "version": "0.1.0",
+  "description": "Un web-scrapper cuya función es obtener información del sitio conocido como MonosChinos.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "test": "mocha -r ts-node/register ./test/test.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MixDevCode/monoschinos-api-ts.git"
+  },
+  "keywords": [
+    "scrapper",
+    "monoschinos",
+    "anime"
+  ],
+  "author": "MixDevCode",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "cloudscraper": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1"
+  }
+}
