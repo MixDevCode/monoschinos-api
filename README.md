@@ -15,13 +15,13 @@ Uso
 Una vez el paquete está instalado, puedes importar la librería utilizando "require":
 
 ```js
-const animeflv = require('monoschinos-api-ts');
+const monoschinos = require('monoschinos-api-ts');
 ```
 
 o utilizando "import":
 
 ```js
-import * as animeflv from 'monoschinos-api-ts';
+import * as monoschinos from 'monoschinos-api-ts';
 ```
 
 ## Funciones
