@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 tsconfig.json
 test.ts
+test
+.gitignore

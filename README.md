@@ -1,13 +1,13 @@
-MonosChinos SCRAPPER ![Licence](https://img.shields.io/npm/l/monoschinos-api-ts) ![Version](https://img.shields.io/npm/v/monoschinos-api-ts) ![Known Vulnerabilities](https://snyk.io/test/github/mixdevcode/monoschinos-api-ts/badge.svg)
+MonosChinos SCRAPPER ![Licence](https://img.shields.io/npm/l/monoschinos-api) ![Version](https://img.shields.io/npm/v/monoschinos-api) ![Known Vulnerabilities](https://snyk.io/test/github/mixdevcode/monoschinos-api/badge.svg)
 ============
-[![NPM](https://nodei.co/npm/monoschinos-api-ts.png)](https://nodei.co/npm/monoschinos-api-ts/)
+[![NPM](https://nodei.co/npm/monoschinos-api.png)](https://nodei.co/npm/monoschinos-api/)
 
 Librería Node.js para obtener información del sitio `https://monoschinos2.com/` utilizando el método de Web-Scraping.
 
 Instalación
 ============
 ```sh
-npm install monoschinos-api-ts
+npm install monoschinos-api
 ```
 
 Uso
@@ -15,13 +15,13 @@ Uso
 Una vez el paquete está instalado, puedes importar la librería utilizando "require":
 
 ```js
-const monoschinos = require('monoschinos-api-ts');
+const monoschinos = require('monoschinos-api');
 ```
 
 o utilizando "import":
 
 ```js
-import * as monoschinos from 'monoschinos-api-ts';
+import * as monoschinos from 'monoschinos-api';
 ```
 
 ## Funciones
@@ -32,7 +32,7 @@ import * as monoschinos from 'monoschinos-api-ts';
 |`query`|string|
 
 ```js
-import { searchAnime } from 'monoschinos-api-ts';
+import { searchAnime } from 'monoschinos-api';
 
 searchAnime("Black Clover").then((result) => {
   console.log(result);
@@ -64,7 +64,7 @@ Una lista JSON que contiene todos los animes encontrados utilizando el `query` e
 
 > **Note** el animeId es obtenido a través de la función `searchAnime` o removiendo `https://monoschinos2.com/anime/` de la URL de un anime.
 ```js
-import { getAnimeInfo } from 'monoschinos-api-ts';
+import { getAnimeInfo } from 'monoschinos-api';
 
 getAnimeInfo("chainsaw-man").then((result) => {
   console.log(result);
@@ -91,7 +91,7 @@ Un objeto JSON que contiene la información del anime solicitado con el `animeId
 #### getLatest()
 
 ```js
-import { getLatest } from 'monoschinos-api-ts';
+import { getLatest } from 'monoschinos-api';
 
 getLatest().then((result) => {
   console.log(result);
@@ -118,7 +118,7 @@ Una lista JSON que contiene los últimos capítulos subidos al sitio web.
 #### getOnAir()
 
 ```js
-import { getOnAir } from 'monoschinos-api-ts';
+import { getOnAir } from 'monoschinos-api';
 
 getOnAir().then((result) => {
   console.log(result);
@@ -145,7 +145,7 @@ Una lista JSON con todos los animes en emisión del sitio.
 #### getCalendar()
 
 ```js
-import { getCalendar } from 'monoschinos-api-ts';
+import { getCalendar } from 'monoschinos-api';
 
 getCalendar().then((result) => {
   console.log(result);
