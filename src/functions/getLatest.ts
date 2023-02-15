@@ -14,14 +14,13 @@ export async function getLatest(): Promise<ChapterData[]> {
         let chapters: ChapterData[] = []
         if($('.col.col-md-6.col-lg-2.col-6').length > 0){
             $('.col.col-md-6.col-lg-2.col-6').each((i, el) => {
-                let temp: ChapterData = {
+                chapters.push({
                     title: $(el).find('h2').text(),
                     chapter: Number($(el).find('div.positioning').children('p').text()),
                     type: $(el).find('div.positioning').children('button').text(),
                     cover: $(el).find('div.animeimgdiv').children('img').attr('data-src') as string,
                     url: $(el).find('a').attr('href') as string,
-                }
-               chapters.push(temp);
+                });
             });
         }
 

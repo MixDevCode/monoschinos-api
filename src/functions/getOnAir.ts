@@ -20,14 +20,13 @@ export async function getOnAir(): Promise<SearchAnimeData[]> {
             const $ = load(onAirData);
             if($('div.col-md-4.col-lg-2.col-6').length > 0){
                 $('div.col-md-4.col-lg-2.col-6').each((i, el) => {
-                    let temp: SearchAnimeData = {
+                    onAir.push({
                         title: $(el).find('h3').text(),
                         type: $(el).find('span').text().split(" · ")[0],
                         year: Number($(el).find('span').text().split(" · ")[1]),
                         cover: $(el).find('img').attr('data-src') as string,
                         url: $(el).find('a').attr('href') as string
-                    }
-                    onAir.push(temp);
+                    });
                 });
             }
         }
