@@ -19,7 +19,7 @@ export async function getLatest(): Promise<ChapterData[]> {
                     chapter: Number($(el).find('div.positioning').children('p').text()),
                     type: $(el).find('div.positioning').children('button').text(),
                     cover: $(el).find('div.animeimgdiv').children('img').attr('data-src') as string,
-                    url: $(el).find('a').attr('href') as string,
+                    url: $(el).find('a').attr('href') as string
                 });
             });
         }

@@ -3,5 +3,6 @@ export interface SearchAnimeData {
     type: string,
     year: number,
     cover: string,
-    url: string
+    url: string,
+    id: string
 }

@@ -25,7 +25,8 @@ export async function getOnAir(): Promise<SearchAnimeData[]> {
                         type: $(el).find('span').text().split(" · ")[0],
                         year: Number($(el).find('span').text().split(" · ")[1]),
                         cover: $(el).find('img').attr('data-src') as string,
-                        url: $(el).find('a').attr('href') as string
+                        url: $(el).find('a').attr('href') as string,
+                        id: $(el).find('a').attr('href')?.split('/')[4] as string
                     });
                 });
             }
