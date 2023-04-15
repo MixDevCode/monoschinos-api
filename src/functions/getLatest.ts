@@ -15,7 +15,7 @@ export async function getLatest(): Promise<ChapterData[]> {
         if($('.col.col-md-6.col-lg-2.col-6').length > 0){
             $('.col.col-md-6.col-lg-2.col-6').each((i, el) => {
                 chapters.push({
-                    title: $(el).find('h2').text(),
+                    title: $(el).find('a').attr('title') as string,
                     chapter: Number($(el).find('div.positioning').children('p').text()),
                     type: $(el).find('div.positioning').children('button').text(),
                     cover: $(el).find('div.animeimgdiv').children('img').attr('data-src') as string,
