@@ -12,13 +12,13 @@ export async function getLatest(): Promise<ChapterData[]> {
         const $ = load(chaptersData);
 
         let chapters: ChapterData[] = []
-        if($('.col.col-md-6.col-lg-2.col-6').length > 0){
-            $('.col.col-md-6.col-lg-2.col-6').each((i, el) => {
+        if($('body > div.container.mt-3 > section:nth-child(2) > ul > li').length > 0){
+            $('body > div.container.mt-3 > section:nth-child(2) > ul > li').each((i, el) => {
                 chapters.push({
-                    title: $(el).find('a').attr('title') as string,
-                    chapter: Number($(el).find('div.positioning').children('p').text()),
-                    type: $(el).find('div.positioning').children('button').text(),
-                    cover: $(el).find('div.animeimgdiv').children('img').attr('data-src') as string,
+                    title: $(el).find('h2').text() as string,
+                    chapter: Number($(el).find('a').children('div').children('span').text()),
+                    type: $(el).find('.my-1').text(),
+                    cover: $(el).find('div.position-relative.overflow-hidden').children('img').attr('data-src') as string,
                     url: $(el).find('a').attr('href') as string
                 });
             });
