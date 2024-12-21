@@ -1,3 +1,7 @@
+MONOS YA NO ESTÁ CON NOSOTROS (por ahora...) así que decidí archivar este repositorio, matta-ne... minna!
+
+============
+
 MonosChinos SCRAPPER ![Licence](https://img.shields.io/npm/l/monoschinos-api) ![Version](https://img.shields.io/npm/v/monoschinos-api) ![Known Vulnerabilities](https://snyk.io/test/github/mixdevcode/monoschinos-api/badge.svg)
 ============
 [![NPM](https://nodei.co/npm/monoschinos-api.png)](https://nodei.co/npm/monoschinos-api/)
